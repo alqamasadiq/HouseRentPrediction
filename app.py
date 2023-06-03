@@ -10,7 +10,7 @@ app= Flask(__name__)
 def home():
     return render_template('HouseRentPridiction_2.html')
 
-# prediction function 
+# prediction function ML
 def ValuePredictor(to_predict_list): 
     to_predict = np.array(to_predict_list).reshape(1, 8) 
     loaded_model = pickle.load(open("HouseRent.pkl", "rb")) 
