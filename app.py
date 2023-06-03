@@ -20,7 +20,6 @@ def ValuePredictor(to_predict_list):
 @app.route('/result', methods = ['POST']) 
 def result(): 
     if request.method == 'POST':
-        #required_fields = ['bhk', 'flatsize', 'areatype','city','fs','bathroom','pc','bf']
         required_fields = {'City':'city', 'BHK':'bhk', 'Furniture Status':'furstatus','Bathroom':'bathroom','Area Type':'areatype','Point of Contact':'pointofcontact','Flat Size':'flatsize','Building Floor':'buildingfloor'}
         errors = []
         for key,value in required_fields.items():
